@@ -32,6 +32,12 @@
 	},
 	"scripts": {
 		"test": "./tests/run-tests.sh",
-		"check-types": "./vendor/bin/psalm"
-	}
+		"check-types": "./vendor/bin/psalm",
+		"pre-autoload-dump": "Aws\\Script\\Composer\\Composer::removeUnusedServices"
+	},
+    "extra": {
+        "aws/aws-sdk-php": [
+            "S3"
+        ]
+    }
 }
